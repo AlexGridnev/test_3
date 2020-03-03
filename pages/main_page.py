@@ -29,3 +29,7 @@ class MainPage:
         elem.clear()
         elem.send_keys(search_string)
         elem.send_keys(Keys.RETURN)
+
+    def click_donate_button(self):
+        element = self.wait.until(expected_conditions.presence_of_element_located(self.locators.DONATE_BUTTON))
+        element.click()
